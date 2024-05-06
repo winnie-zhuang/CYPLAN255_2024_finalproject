@@ -47,7 +47,7 @@ layout: default
 <p>We created a three-pronged approach for our research questions and sub-questions to guide this exploration: park amenities and perception, park access, and park disparities.</p>
 
 <ol>
-  <li>Park Amenities and Perception
+  <li>Park Amenities and Perceptions
     <ul>
       <li>What amenities are in Oakland's parks?</li>
       <li>How are Oakland's parks perceived (via park ratings)?</li>
@@ -154,13 +154,13 @@ layout: default
   <div class="col-md-12">
     <h5 class="fw-bold">Data Analysis</h5>
 
-<p>With our cleaned data, we then started to analyze different aspects of parks. We first mapped the parks with their respective amenities cout and plotted a histogram of parks and number of amenities.</p>
+<p>With our cleaned data, we then started to analyze different aspects of parks. We first mapped the parks with their respective amenities count and plotted a histogram of parks and number of amenities.</p>
 
-<p>We also analyzed bus access by plotting all bus stops against the study park locations, creating an 800-meter or 1/2 mile buffer around each park and summed the number of bus stops and bus routes within the 800 meters radius.</p>
+<p>We also analyzed bus access by plotting all bus stops against the study park locations, creating a 400-meter or 1/4 mile buffer around each park and summed the number of bus stops and bus routes within the 400-meter radius.</p>
 
 <p>Then, we looked at the Yelp reviews and looked at each of the parks with the thematic words. Finally, we conducted a linear regression with the 10 amenities and Google Maps park ratings.</p>
 
-<p>Additionally, we overlayed the parks with the priority neighborhoods and analyzed the relationship between priority neighborhoods, parks amenities, and park ratings.</p>
+<p>Additionally, we overlayed the parks with the priority neighborhoods and analyzed the relationship between priority neighborhoods, parks amenities, park ratings, and transit access.</p>
     
   </div>
 </div>
@@ -169,8 +169,69 @@ layout: default
   <div class="col-md-12">
     <h3 class="fw-bold">Key Findings</h3>
     
-KEY FINDINGS SECTION
+<div class="row g-5 mb-5">
+  <div class="col-md-12">
+    <h5 class="fw-bold">Park Amenities and Perception</h5>
 
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h6 class="fw-bold">Park Amenities</h6>
+
+          From our analysis, after removing non-free amenities and outliers, we found 10 main park amenities. This includes the following amenities:<br>
+
+          <ul>
+          <li>BBQ grill</li>
+          <li>Bench</li>
+          <li>Drinking fountain</li>
+          <li>Toilet</li>
+          <li>Bike parking</li>
+          <li>Trash bin</li>
+          <li>Community center</li>
+          <li>Picnic table</li>
+          <li>Shelter</li>
+          <li>Theater (like outdoor amphitheater)</li>
+          </ul><br>
+
+    <p>The map below shows the amenity counts of each park in Oakland. Majority of the parks in Oakland do not have any listed amenities.</p><br>
+
+          <img src = "images/amenity_ct_map.png"><br>
+
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h6 class="fw-bold">Park Perceptions</h6>
+
+          <p>In addition to determining the main amenities, we also looked at the relationship between park, amenities, and reviews.</p><br>
+
+          <p>Although we only had a select number of reviews from Yelp, we wanted to see the average ratings from Yelp for each of the parks. Lake Merritt has one of the highest number reviews, but one of the lower average ratings. However, overall, all the parks reviewed in Yelp had an average rating greater than 4.30.</p><br>
+
+          <img src = "images/Yelp_review_histo.png"><br>
+
+          <p>We then looked at the relationship between Google reviews and the ten amenities using linear regression. Each of the amenity had a relatively low R<sup>2</sup>; however, drinking water and toilets have a slightly higher R<sup>2</sup>at 0.167 and 0.165 respectfully. When all the amenities were included in one collective model, R<sup>2</sup> was 0.258. Overall, we found the more amenities a park has, the higher the rating. Specific amenities such as drinking water and toilets have a larger impact than other amenities. However, amenities like community centers and waste baskets showed a negative impact. This may have occurred due to the relatively small dataset. </p><br>
+
+          <img src = 'images/amenity_LR.png'><br>
+
+          <p>Finally, we created lists of thematic activites (active, nature, and social words), and using the Yelp reviews, we counted the reviews containing those words. The figure below shows the parks and the type of activites occurring at those areas. Lake Temescal, for example, saw more nature words and one count of active words while Redwood Regional Park saw a more healthy mix of activities.</p><br>
+
+          <img src = 'images/yelp_themes_histo.png'><br>
+
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h6 class="fw-bold">Park Access</h6>
+
+          Winnie to write something here
+
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h6 class="fw-bold">Park Disparities</h6>
+
+          <p>We were also curious about the spatial disparities between parks and their amenities. So we mapped parks and their respective amenity count to Oakland's priority neighborhoods. From our observations, we saw that parks with more amenities were typically located in low and lowest priority neighborhood.</p><br>
+          
+    <img src = 'images/priority_neighborhoods_parks.png'><br>
+          
+    <p>We then proceeded to look at the park counts, total amenities, and average park rating by the priority neighborhoods. Lowest priority neigborhood had the most amount parks and highest average rating while highest priority neighborhoods had the least amount of parks and the lowest average rating. The parks in the highest priority neighborhoods also had the least amount of amenities.</p><br>
+
+        <img src = 'images/total_park_counts.png'><br>
+          
   </div>
 </div>
 
