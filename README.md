@@ -1,9 +1,8 @@
-# CYPLAN255_2024_finalproject
-GitHub Page for CYPLAN 255 final project (Spring 2024)
+Parks are one of the few "free-to-be" places in our cities and towns. They are integral to health and well-being by integral to health and well-being by providing space for physical activity and been shown to help reduce stress. They've been connected to lower cawrdiovascular disease risk factors, Type 2 diabetes prevalence, and heat-related mortality risk.
 
-#### People
+They also provide a space for community, whether folks are there to hang out wiht friends and family or to be alone but amongst neighbors. During the COVID-19 pandemic, people became much more aware of this important role of parks.
 
-The `_layouts/people.html` layout can be used to showcase and describe people in your research group. People are defined in the `_data/settings.yml` file, and markdown pages for each person with the `_layouts/page.html` layout can be placed in the `people` directory.
+Environmental "hard" data metrics of parks like vegetation index and tree canopy cover are often used in characterizing parks. Park access is also a prominent data point in recent years with statewide initiatives like
 
 <div class="row g-5 mb-5">
   <div class="col-md-12">
