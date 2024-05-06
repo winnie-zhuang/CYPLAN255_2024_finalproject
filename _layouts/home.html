@@ -114,7 +114,41 @@ layout: default
   <div class="col-md-12">
     <h3 class="fw-bold">Methodology</h3>
     
-METHODOLOGY SECTION
+<p>We took the following steps to clean and analyze our data.</p>
+
+<div class="row g-5 mb-5">
+  <div class="col-md-12">
+    <h4 class="fw-bold">Data Collection and Cleaning</h4>
+
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h4 class="fw-bold">OpenStreetMap (OSM)</h4>
+
+            <ol>
+            <li>After pulling OSM data, we spatially joined the data with parks</li>
+            <li>Cleaned any errors from the spatial join and dropped any outlier amenities</li>
+            <li>Resulted in 10 types of park amenities</li>
+            </ol>
+
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h4 class="fw-bold">Yelp</h4>
+
+            <ol>
+            <li>Pulled ratings and reviews of parks in Oakland</li>
+            <li>Filtered out any non-Oakland parks, filtered out filler words, created thematic word lists</li>
+            <li>Created visuals!</li>
+            </ol>
+
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h4 class="fw-bold">Google Maps</h4>
+
+            <ol>
+            <li>Pulled average ratings and count of reviews of parks in Oakland</li>
+            <li>Cross-referenced the parks with the OSM Parks Data and removed null reviews</li>
+            <li>Conducted a linear regression with the average ratings and amenity types</li>
+            </ol>
 
   </div>
 </div>
