@@ -7,6 +7,24 @@ layout: default
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    .container{
+      display: flex;
+      align-items:center;
+    }
+    .image {
+      align-items: center;
+    }
+    .text{
+      
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
     <title>Default Table Style</title>
     <style>
         table {
@@ -194,7 +212,11 @@ layout: default
 
     <p>The map below shows the amenity counts of each park in Oakland. Majority of the parks in Oakland do not have any listed amenities.</p><br>
 
+          <div class = 'container'>
+          <div class = 'image'>
           <img src = "images/amenity_ct_map.png"><br>
+          </div>
+          </div>
 
     <div class="row g-5 mb-5">
       <div class="col-md-12">
@@ -204,15 +226,21 @@ layout: default
 
           <p>Although we only had a select number of reviews from Yelp, we wanted to see the average ratings from Yelp for each of the parks. Lake Merritt has one of the highest number reviews, but one of the lower average ratings. However, overall, all the parks reviewed in Yelp had an average rating greater than 4.30.</p><br>
 
+          <div class = 'image'>
           <img src = "images/Yelp_review_histo.png"><br>
+          </div>
 
           <p>We then looked at the relationship between Google reviews and the ten amenities using linear regression. Each of the amenity had a relatively low R<sup>2</sup>; however, drinking water and toilets have a slightly higher R<sup>2</sup>at 0.167 and 0.165 respectfully. When all the amenities were included in one collective model, R<sup>2</sup> was 0.258. Overall, we found the more amenities a park has, the higher the rating. Specific amenities such as drinking water and toilets have a larger impact than other amenities. However, amenities like community centers and waste baskets showed a negative impact. This may have occurred due to the relatively small dataset. </p><br>
 
+          <div class = 'image'>
           <img src = 'images/amenity_LR.png'><br>
+          </div>
 
           <p>Finally, we created lists of thematic activites (active, nature, and social words), and using the Yelp reviews, we counted the reviews containing those words. The figure below shows the parks and the type of activites occurring at those areas. Lake Temescal, for example, saw more nature words and one count of active words while Redwood Regional Park saw a more healthy mix of activities.</p><br>
 
+          <div class = 'image'>
           <img src = 'images/yelp_themes_histo.png'><br>
+          </div>
 
     <div class="row g-5 mb-5">
       <div class="col-md-12">
@@ -225,12 +253,16 @@ layout: default
         <h6 class="fw-bold">Park Disparities</h6>
 
           <p>We were also curious about the spatial disparities between parks and their amenities. So we mapped parks and their respective amenity count to Oakland's priority neighborhoods. From our observations, we saw that parks with more amenities were typically located in low and lowest priority neighborhood.</p><br>
-          
-    <img src = 'images/priority_neighborhoods_parks.png'><br>
-          
-    <p>We then proceeded to look at the park counts, total amenities, and average park rating by the priority neighborhoods. Lowest priority neigborhood had the most amount parks and highest average rating while highest priority neighborhoods had the least amount of parks and the lowest average rating. The parks in the highest priority neighborhoods also had the least amount of amenities.</p><br>
 
-        <img src = 'images/total_park_counts.png'><br>
+          <div class = 'image'>
+          <img src = 'images/priority_neighborhoods_parks.png'><br>
+          </div>
+                  
+          <p>We then proceeded to look at the park counts, total amenities, and average park rating by the priority neighborhoods. Lowest priority neigborhood had the most amount parks and highest average rating while highest priority neighborhoods had the least amount of parks and the lowest average rating. The parks in the highest priority neighborhoods also had the least amount of amenities.</p><br>
+
+          <div class = 'image'>
+          <img src = 'images/total_park_counts.png'><br>
+          </div>
           
   </div>
 </div>
