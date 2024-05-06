@@ -50,7 +50,37 @@ layout: default
   <div class="col-md-12">
     <h3 class="fw-bold">Data</h3>
 
-When one wants to explore a new park, searching online can be a helpful tool for this. While apps like Strava and AllTrails have a plethora of data on parks with trails, their users tend to be more fitness-minded and do not necessarily capture other uses of parks. Considering this, OpenStreetMap, Google Reviews, and Yelp were selected as data sources. City of Oakland’s parks data was also utilized for cross-checking but ultimately not incorporated due to quality issues. We utilized City of Oakland’s Priority Communities data at the census tract-level for the third prong. The table below, we listed the data we used for our analysis as well as limitation we experienced for each source.
+<p>When one wants to explore a new park, searching online can be a helpful tool for this. While apps like Strava and AllTrails have a plethora of data on parks with trails, their users tend to be more fitness-minded and do not necessarily capture other uses of parks. Considering this, OpenStreetMap, Google Reviews, and Yelp were selected as data sources. City of Oakland’s parks data was also utilized for cross-checking but ultimately not incorporated due to quality issues. We utilized City of Oakland’s Priority Communities data at the census tract-level for the third prong. The table below, we listed the data we used for our analysis as well as limitation we experienced for each source.</p>
+
+<p>
+      <table>
+        <tr>
+          <th bgcolor = '#439934'>Source</th>
+          <th bgcolor = '#439934'>Data Used</th>
+          <th bgcolor = '#439934'>Limitation</th>
+        </tr>
+        <tr>
+          <td>OpenStreetMap</td>
+          <td>Park names and amenities data for all Oakland parks, road network, and bus stop locations</td>
+          <td>User-defined so defintion of parks varied and amenities were only included if someone contributed.</td>
+        </tr>
+        <tr>
+          <td>Yelp</td>
+          <td>Reviews and ratings of Oakland parks through Yelp API</td>
+          <td>Smallest dataset. Only 12 parks in Oakland have Yelp reviews.</td>
+        </tr>
+        <tr>
+          <td>Google Maps</td>
+          <td>Average ratings and number of reviews of each Oakland park</td>
+          <td>Could not get Google's API so limited to only the ratings. But had many more parks than 12 (119 to be exact!)</td>
+        </tr>
+        <tr>
+          <td>City of Oakland</td>
+          <td>Map of parks dataset - Official Park Names</td>
+          <td>Dataset had typos and inconsistencies. This data source was not used in the final analysis, but did aid in some cross-checking.</td>
+        </tr>
+      </table>    
+</p>
 
   </div>
 </div>
@@ -58,7 +88,7 @@ When one wants to explore a new park, searching online can be a helpful tool for
 <div class="row g-5 mb-5">
   <div class="col-md-12">
     <h3 class="fw-bold">Header 3</h3>
-
+    
 Text 3
 
   </div>
