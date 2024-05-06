@@ -104,7 +104,7 @@ layout: default
         </tr>
         <tr>
           <td>OpenStreetMap</td>
-          <td>Park names and amenities data for all Oakland parks, road network, and bus stop locations</td>
+          <td>Park names and amenities data for all Oakland parks, road network, bus stop locations, and routes served by each bus stop</td>
           <td>User-defined so defintion of parks varied and amenities were only included if someone contributed.</td>
         </tr>
         <tr>
@@ -246,7 +246,23 @@ layout: default
       <div class="col-md-12">
         <h6 class="fw-bold">Park Access</h6>
 
-          <p>Winnie to write something here</p><br>
+          <p>We retrieved OSM data for Oakland's bus stop locations as the first step to evaluating transit access to our study parks. The map below shows all of Oakland's bus stops in relation to our study parks.</p><br>
+
+          <div class = 'image'>
+          <img src = 'images/all_bus_routes_parks.png'>
+          </div><br>
+
+          <p>To identify which bus stops are within a walkable/accessible distance of each park, we determined a walk shed radius of 400 meters or 1/4 mile, which is consistent with the rule-of-thumb for calculating transit catchment areas. The map below illustrates the quantity of buses within this identified 400-meter buffer for each study park, with parks like Lakeside Park (75 bus stops in proximity), Dimond Canyon Park (37 bus stops in proximity), and Joaquin Miller Park (37 bus stops in proximity) with the highest count of bus stops within a walkable distance.</p><br>
+
+          <div class = 'image'>
+          <img src = 'images/bus_stops_proximity.png'>
+          </div><br>
+
+          <p>However, we deemed that it was appropriate to examine the number of bus routes that are served by each bus stop, since the quantity of bus stops does not paint the complete picture of transit accessibility. From OSM data, each bus stop's route information was retrieved and included in our analysis. The map below reveals the number of bus routes accessible within a 400-meter walk shed from each of our study parks. Some parks like Temescal Regional Recreation Area with relatively fewer bus stops in proximity (18 bus stops) ended up ranking amongst the top 5 parks based on bus routes in proximity (81 bus routes).</p><br>
+
+          <div class = 'image'>
+          <img src = 'images/bus_routes_proximity.png'>
+          </div><br>
 
     <div class="row g-5 mb-5">
       <div class="col-md-12">
@@ -258,7 +274,7 @@ layout: default
           <img src = 'images/priority_neighborhoods_parks.png'><br>
           </div>
                   
-          <p>We then proceeded to look at the park counts, total amenities, and average park rating by the priority neighborhoods. Lowest priority neigborhood had the most amount parks and highest average rating while highest priority neighborhoods had the least amount of parks and the lowest average rating. The parks in the highest priority neighborhoods also had the least amount of amenities.</p><br>
+          <p>We then proceeded to look at the park counts, total amenities, and average park rating by the priority neighborhoods. Lowest priority neigborhoods had the most amount of parks and highest average rating while highest priority neighborhoods had the least amount of parks and the lowest average rating. The parks in the highest priority neighborhoods also had the least amount of amenities.</p><br>
           <div class = 'image'>
           <img src = 'images/total_park_counts.png'><br>
           </div>
@@ -268,6 +284,16 @@ layout: default
           <div class = 'image'>
               <img src = 'images/average_park_ratings.png'><br>
           </div>
+
+          <p>In terms of transit accessibility, a similar story is presented. Mentioned in the previous section for park access, an examination of bus stop proximity alone does not provide an accurate look at access. There isn't a consistent relationship between bus stop proximity to parks and neighborhood priority scores, however by looking at bus route proximity to parks vs. neighborhood priority scores there was a clearer picture. Our study parks located in the lowest priority neigborhoods had the highest average quantity of accessible bus routes (within 400 meters), while study parks located in the highest priority neighborhoods had the lowest average quantity of accessible bus routes.</p><br>
+
+          <div class = 'image'>
+          <img src = 'images/avg_bus_stops_priority.png'><br>
+          </div>
+          <div class = 'image'>
+              <img src = 'images/avg_bus_routes_priority.png'><br>
+          </div>
+          
   </div>
 </div>
 
@@ -280,6 +306,7 @@ layout: default
     <li value = "1"> Barakat & Yousufzai. 2020. Green space and mental health for vulnerable populations: A conceptual review of the evidence. </li>
     <li>Tamosiunas et al. 2014. Accessibility and use of urban green spaces, and cardiovascular health: findings from a Kaunas cohort study. </li>
     <li>Choi et al. 2022. Effect modification of greenness on the association between heat and mortality: A multi-city multi-country study.</li>
+    <li>Morphocode. nd. The 5-minute walk. <a href="https://morphocode.com/the-5-minute-walk/" title="The 5-minute walk" target="_blank">https://morphocode.com/the-5-minute-walk/</a></li>
   </ol>
 <p>
 
