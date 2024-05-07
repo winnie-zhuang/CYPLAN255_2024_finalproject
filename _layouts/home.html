@@ -94,7 +94,7 @@ layout: default
   <div class="col-md-12">
     <h3 class="fw-bold">Data</h3>
 
-<p>When one wants to explore a new park, searching online can be a helpful tool for this. While apps like Strava and AllTrails have a plethora of data on parks with trails, their users tend to be more fitness-minded and do not necessarily capture other uses of parks. Considering this, OpenStreetMap, Google Reviews, and Yelp were selected as data sources. City of Oakland’s parks data was also utilized for cross-checking but ultimately not incorporated due to quality issues. We utilized City of Oakland’s Priority Communities data at the census tract-level for the third prong. The table below, we listed the data we used for our analysis as well as limitation we experienced for each source.</p>
+<p>When one wants to explore a new park, searching online can be a helpful tool for this. While apps like Strava and AllTrails have a plethora of data on parks with trails, their users tend to be more fitness-minded and do not necessarily capture other uses of parks. Considering this, OpenStreetMap, Google Reviews, and Yelp were selected as data sources. City of Oakland’s parks data was also utilized for cross-checking but ultimately not incorporated due to quality issues. We utilized City of Oakland’s Priority Communities data at the census tract-level for the third prong. In the table below, we listed the data we used for our analysis as well as limitation we experienced for each source.</p>
 
 <p>
       <table>
@@ -150,10 +150,14 @@ layout: default
 
             <ol>
             <li>After pulling OSM data, we spatially joined the data with parks</li>
-                <li>Of 162 total parks, 75 have amenities<li>
+                <ul>
+                    <li>Of the 162 parks pulled from OSM data, 75 parks had amenities</li>
+                </ul>
             <li>Cleaned any errors from the spatial join and dropped any outlier amenities</li>
-                <li>504 amenities total, 41 unique. After dropping outlier amenities, we had 52 parks with amenities<li>
-            <li>Resulted in 10 unique types of park amenities, 360 total</li>
+                <ul>
+                    <li>There were 504 amenities total with 41 of those amenities unique. After dropping outlier amenities, we had 52 parks with amenities</li>
+                </ul>
+            <li>Resulted in 10 unique types of park amenities, 360 total amenities</li>
             </ol>
 
     <div class="row g-5 mb-5">
@@ -163,7 +167,9 @@ layout: default
             <ol>
             <li>Pulled ratings and reviews of parks in Oakland</li>
             <li>Filtered out any non-Oakland parks, filtered out filler words, created thematic word lists</li>
-                <li>Resulted in 12 parks with reviews, of which the median review count was 119 and the mean review count was 197<li>
+                <ul>
+                    <li>This resulted in 12 parks with reviews. The median review count was 119 and the mean review count was 197</li>
+                </ul>
             <li>Created visuals!</li>
             </ol>
 
@@ -174,7 +180,9 @@ layout: default
             <ol>
             <li>Pulled average ratings and count of reviews of parks in Oakland</li>
             <li>Cross-referenced the parks with the OSM Parks Data and removed null reviews</li>
-                <li>Went from 173 to 117 reviews
+                <ul>
+                    <li>Went from 173 to 117 reviews</li>
+                </ul>
             <li>Conducted a linear regression with the average ratings and amenity types</li>
             </ol>
     
@@ -186,7 +194,9 @@ layout: default
             <li>Pulled Priority Neighborhoods data</li>
             <li>Merged this with Alameda County's census tract geographies TIGERLINE file and narrowed down to Oakland</li>
             <li>Explored differences in parks and amenities by the different neighborhood priority rankings</li>
-                <li>Oakland has 110 census tracts and the City split them evenly into the rankings, with 22 tracts in each ranking</li>
+                <ul>
+                    <li>Oakland has 110 census tracts and the City split them evenly into the rankings, with 22 tracts in each ranking</li>
+                </ul>>
             </ol><br>
           
 <div class="row g-5 mb-5">
@@ -265,7 +275,7 @@ layout: default
 
     <div class="row g-5 mb-5">
       <div class="col-md-12">
-        <h6 class="fw-bold">Park Access</h6>
+        <h5 class="fw-bold">Park Access</h5>
 
           <p>We retrieved OSM data for Oakland's bus stop locations as the first step to evaluating transit access to our study parks. The map below shows all of Oakland's bus stops in relation to our study parks.</p><br>
 
@@ -273,7 +283,7 @@ layout: default
           <img src = 'images/all_bus_routes_parks.png'>
           </div><br>
 
-          <p>To identify which bus stops are within a walkable/accessible distance of each park, we determined a walk shed radius of 400 meters or 1/4 mile, which is consistent with the rule-of-thumb for calculating transit catchment areas. The map below illustrates the quantity of buses within this identified 400-meter buffer for each study park, with parks like Lakeside Park (75 bus stops in proximity), Dimond Canyon Park (37 bus stops in proximity), and Joaquin Miller Park (37 bus stops in proximity) with the highest count of bus stops within a walkable distance.</p><br>
+          <p>To identify which bus stops are within a walkable/accessible distance of each park, we determined a walk shed radius of 400 meters or 1/4 mile, which is consistent with the rule-of-thumb for calculating transit catchment areas. The map below illustrates the quantity of buses within this identified 400-meter buffer for each study park, with parks like Lakeside Park (75 bus stops in proximity), Dimond Canyon Park (37 bus stops in proximity), and Joaquin Miller Park (37 bus stops in proximity) with the highest counts of bus stops within a walkable distance.</p><br>
 
           <div class = 'image'>
           <img src = 'images/bus_stops_proximity.png'>
@@ -287,7 +297,7 @@ layout: default
 
     <div class="row g-5 mb-5">
       <div class="col-md-12">
-        <h6 class="fw-bold">Park Disparities</h6>
+        <h5 class="fw-bold">Park Disparities</h5>
 
           <p>We were also curious about the spatial disparities between parks and their amenities. We mapped parks and their respective amenity count to Oakland's priority neighborhoods. The City of Oakland prioritizes neighborhoods based on areas with significant population densities determined to have experienced historic and current disparities. The priority neighborhood designations are based on sociodemographic factors such as race/ethnicity, low-income households, and people with disabilities. From our observations, we saw that parks with more amenities were typically located in low and lowest priority neighborhood.</p><br>
 
@@ -306,7 +316,7 @@ layout: default
               <img src = 'images/average_park_ratings.png'><br><br>
           </div>
 
-          <p>In terms of transit accessibility, a similar story is presented. Mentioned in the previous section for park access, an examination of bus stop proximity alone does not provide an accurate look at access. There isn't a consistent relationship between bus stop proximity to parks and neighborhood priority scores, however by looking at bus route proximity to parks vs. neighborhood priority scores there was a clearer picture. Our study parks located in the lowest priority neighborhoods had the highest average quantity of accessible bus routes (within 400 meters), while study parks located in the highest priority neighborhoods had the lowest average quantity of accessible bus routes.</p><br>
+          <p>In terms of transit accessibility, a similar story is presented. Mentioned in the previous section for park access, an examination of bus stop proximity alone does not provide an accurate look at access. There is not a consistent relationship between bus stop proximity to parks and neighborhood priority scores; however, by looking at bus route proximity to parks vs. neighborhood priority scores, there was a clearer picture. Parks located in the lowest priority neighborhoods had the highest average quantity of accessible bus routes (within 400 meters), while parks located in the highest priority neighborhoods had the lowest average quantity of accessible bus routes.</p><br>
 
           <div class = 'image'>
           <img src = 'images/avg_bus_stops_priority.png'><br>
@@ -322,7 +332,6 @@ layout: default
   <div class="col-md-12">
     <h3 class="fw-bold">References</h3>
     
-</p>
   <ol>
     <li value = "1"> Barakat & Yousufzai. 2020. Green space and mental health for vulnerable populations: A conceptual review of the evidence. https://doi.org/10.3138/jmvfh-2019-0040 </li>
     <li>City of Oakland. nd. OakDOT Geographic Equity Toolbox. <a href="https://www.oaklandca.gov/resources/oakdot-geographic-equity-toolbox" title="OakDOT Geographic Equity Toolbox" target="_blank">https://www.oaklandca.gov/resources/oakdot-geographic-equity-toolbox</a></li>
@@ -335,7 +344,8 @@ layout: default
     <li>The Trust for Public Land. 2023. https://www.tpl.org/city/oakland-california </li>
     <li>Yelp Dataset. https://www.yelp.com/dataset </li>
   </ol>
-<p>
+
+      <p>Check out our <a href = https://github.com/winnie-zhuang/CYPLAN255_2024_finalproject/>Github!</a></p>
 
   </div>
 </div>
