@@ -119,12 +119,15 @@ layout: default
         </tr>
         <tr>
           <td>City of Oakland</td>
-          <td>Map of parks dataset - Official Park Names</td>
-          <td>Dataset had typos and inconsistencies. This data source was not used in the final analysis, but did aid in some cross-checking.</td>
+          <td>1. Map of parks dataset - Official Park Names
+              2. Priority Neighborhoods census tracts</td>
+          <td>The parks dataset had typos and inconsistencies. This data source was not used in the final analysis, but did aid in some cross-checking.</td>
         </tr>
       </table>    
 </p>
 
+      
+      
   </div>
 </div>
 
@@ -166,6 +169,16 @@ layout: default
             <li>Pulled average ratings and count of reviews of parks in Oakland</li>
             <li>Cross-referenced the parks with the OSM Parks Data and removed null reviews</li>
             <li>Conducted a linear regression with the average ratings and amenity types</li>
+            </ol><br>
+    
+    <div class="row g-5 mb-5">
+      <div class="col-md-12">
+        <h6 class="fw-bold">City of Oakland</h6>
+
+            <ol>
+            <li>Pulled Priority Neighborhoods data</li>
+            <li>Merged this with census tract geographies TIGERLINE file</li>
+            <li>Explored differences in parks and amenities by the different neighborhood priority rankings</li>
             </ol><br>
           
 <div class="row g-5 mb-5">
@@ -227,7 +240,7 @@ layout: default
           <p>Although we only had a select number of reviews from Yelp, we wanted to see the average ratings from Yelp for each of the parks. Lake Merritt has one of the highest number reviews, but one of the lower average ratings. However, overall, all the parks reviewed in Yelp had an average rating greater than 4.30.</p><br>
 
           <div class = 'image'>
-          <img src = "images/Yelp_review_histo.png">
+          <img src = "images/updated_Yelp_review_histo.png">
           </div><br>
 
           <p>We then looked at the relationship between Google reviews and the ten amenities using linear regression. Each of the amenities had a relatively low R<sup>2</sup>; however, drinking water and toilets have a slightly higher R<sup>2</sup>at 0.167 and 0.165, respectively. When all the amenities were included in one collective model, R<sup>2</sup> was 0.258. Overall, we found that the more amenities a park has, the higher the park rating. Specific amenities such as drinking water and toilets have a larger impact than other amenities. However, amenities like community centers and waste baskets showed a negative impact. This may have occurred due to the relatively small sample size and dataset. </p><br>
@@ -271,7 +284,7 @@ layout: default
           <p>We were also curious about the spatial disparities between parks and their amenities. So we mapped parks and their respective amenity count to Oakland's priority neighborhoods. The City of Oakland prioritizes neighborhoods based on areas with significant population densities determined to have experienced historic and current disparities. The priority neighborhood designations are based on sociodemographic factors such as race/ethnicity, low-income households, and people with disabilities. From our observations, we saw that parks with more amenities were typically located in low and lowest priority neighborhood.</p><br>
 
           <div class = 'image'>
-          <img src = 'images/priority_neighborhoods_parks.png'><br>
+          <img src = 'images/updated_priority_neighborhoods_parks.png'><br>
           </div>
                   
           <p>We then proceeded to look at the park counts, total amenities, and average park rating by the priority neighborhoods. Lowest priority neighborhoods had the most amount of parks and highest average rating while highest priority neighborhoods had the least amount of parks and the lowest average rating. The parks in the highest priority neighborhoods also had the least amount of amenities.</p><br>
